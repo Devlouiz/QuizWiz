@@ -1,8 +1,6 @@
 //import { data } from 'autoprefixer'
 import React from 'react'
 import { useState,useEffect } from 'react'
-import Question from './Question'
-import axios from 'axios'
 import { BallTriangle } from 'react-loader-spinner'
 
 const Quizpage = () => {
