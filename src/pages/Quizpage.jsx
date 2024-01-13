@@ -13,7 +13,7 @@ const Quizpage = () => {
         const FetchData = async () =>{
             setIsLoading(true)
             try {
-                const req = await fetch("https://cors-anywhere.herokuapp.com/https://opentdb.com/api.php?amount=5&difficulty=medium")
+                const req = await fetch("https://opentdb.com/api.php?amount=5&difficulty=medium")
                 const quizdata = await req.json()
                 const Quizdat = await quizdata.results
                 //console.log(Quizdat)
