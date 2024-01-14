@@ -3,6 +3,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { BallTriangle } from 'react-loader-spinner'
 
+const BASE_URL = "https://opentdb.com/api.php?amount=5&difficulty=medium"
 const Quizpage = () => {
     const [quizzes, setQuizzes] = useState([])
     const [userAnswers, setUserAnswers] = useState({})
@@ -13,7 +14,7 @@ const Quizpage = () => {
         const FetchData = async () =>{
             setIsLoading(true)
             try {
-                const req = await fetch("https://opentdb.com/api.php?amount=5&difficulty=medium")
+                const req = await fetch(`${BASE_URL}`)
                 const quizdata = await req.json()
                 const Quizdat = await quizdata.results
                 //console.log(Quizdat)
